@@ -1,0 +1,28 @@
+{
+  "name": "promiseweb",
+  "version": "1.0.13",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "repository": "github.com/86nichola/promiseweb",
+  "homepage": "https://github.com/86nichola/promiseweb",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "seongbeom kim",
+    "email": "86nichola@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "promise",
+    "async",
+    "sync"
+  ],
+  "description": "Linked Javascript Promise Object for async callback process convert to simple flat source.",
+  "files": [
+    "src",
+    "lib",
+    "LICENSE"
+  ]
+}
