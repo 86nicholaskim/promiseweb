@@ -1,3 +1,3 @@
-import promiseweb from "./lib/promiseweb";
+import promiseweb from "../lib/promiseweb";
 
 export default promiseweb;
