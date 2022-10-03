@@ -1,6 +1,6 @@
 {
   "name": "promiseweb",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "main": "src/index.js",
   "module": "lib/promiseweb.js",
   "repository": "github.com/86nichola/promiseweb",

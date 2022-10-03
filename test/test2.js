@@ -31,8 +31,8 @@ let asyncApiFnList = {
     }),
 
   saveApi: function saveApi() {
-    return Promise((res, rej) => {
-      // call api
+    return new Promise((res, rej) => {
+      // call save api after validator
       // call return res()
     });
   },
@@ -40,7 +40,5 @@ let asyncApiFnList = {
 
 add({ name: "validator", fn: asyncApiFnList.validator });
 add({ name: "saveApi", fn: asyncApiFnList.saveApi });
-start();
-
-let stepByStepPromiseAction = [{}, {}];
-flow({ actions: stepByStepPromiseAction });
+let test2Promise = start();
+test2Promise.then((result) => {}).catch((e) => {});
