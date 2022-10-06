@@ -1,8 +1,7 @@
 {
   "name": "promiseweb",
-  "version": "1.0.17",
+  "version": "1.0.19",
   "main": "src/index.js",
-  "module": "lib/promiseweb.js",
   "repository": "github.com/86nichola/promiseweb",
   "homepage": "https://github.com/86nichola/promiseweb",
   "scripts": {
@@ -19,10 +18,5 @@
     "async",
     "sync"
   ],
-  "description": "Linked Javascript Promise Object for async callback process convert to simple flat source.",
-  "files": [
-    "src",
-    "lib",
-    "LICENSE"
-  ]
+  "description": "Linked Javascript Promise Object for async callback process convert to simple flat source."
 }

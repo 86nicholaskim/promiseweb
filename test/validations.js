@@ -1,5 +1,10 @@
 import { createPromiseWeb } from "../lib/promiseweb";
 
+/*
+ * test case
+ *  -- promiseWebInstance have prevPromise resolve callback by connect function
+ *  -- createPromiseWeb can create new flow in low level
+ */
 export default validations = (promiseWebInstance) => {
   // add actions with Array function list
   addFlow(promiseWebInstance);
@@ -23,8 +28,8 @@ export default validations = (promiseWebInstance) => {
 };
 
 // add actions with Array function list
-function addFlow(fn) {
-  fn.flow({
+function addFlow(promiseWebInstance) {
+  promiseWebInstance.flow({
     actions: [
       // fn1-1
       function validationApi1() {
