@@ -35,6 +35,7 @@ function addFlow(promiseWebInstance) {
       function validationApi1() {
         return new Promise((res, rej) => {
           const promiseWeb = createPromiseWeb();
+          promiseWeb.connect({ resolve: res, reject: rej });
           /*
            *  fn2-1 (Promise)
            *  fn2-2 (Promise)

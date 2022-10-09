@@ -1,8 +1,6 @@
 import promiseweb, { createPromiseWeb } from "../src/promiseweb";
 import validations from "./validations";
 
-const { add, start, connect, flow, actionInit } = promiseweb;
-
 /************************************************************
  *   TEST CASE 2
  *     >> using add, connect function for step by step with Promise object
@@ -20,25 +18,27 @@ const { add, start, connect, flow, actionInit } = promiseweb;
  *   fn1-3 (Promise)
  *
  */
+export default function test2() {
+  const { add, start, connect, flow, actionInit } = promiseweb;
+  let asyncApiFnList = {
+    validator: () =>
+      new Promise((valRes, valRej) => {
+        const createPromiseWebInstance = createPromiseWeb();
+        // connect fn called after validations complete.
+        createPromiseWebInstance.connect({ resolve: valRes, reject: valRej });
+        validations(createPromiseWebInstance);
+      }),
 
-let asyncApiFnList = {
-  validator: () =>
-    new Promise((valRes, valRej) => {
-      const createPromiseWebInstance = createPromiseWeb();
-      // connect fn called after validations complete.
-      createPromiseWebInstance.connect({ resolve: valRes, reject: valRej });
-      validations(createPromiseWebInstance);
-    }),
+    saveApi: function saveApi() {
+      return new Promise((res, rej) => {
+        // call save api after validator
+        // call return res()
+      });
+    },
+  };
 
-  saveApi: function saveApi() {
-    return new Promise((res, rej) => {
-      // call save api after validator
-      // call return res()
-    });
-  },
-};
-
-add({ name: "validator", fn: asyncApiFnList.validator });
-add({ name: "saveApi", fn: asyncApiFnList.saveApi });
-let test2Promise = start();
-test2Promise.then((result) => {}).catch((e) => {});
+  add({ name: "validator", fn: asyncApiFnList.validator });
+  add({ name: "saveApi", fn: asyncApiFnList.saveApi });
+  let test2Promise = start();
+  test2Promise.then((result) => {}).catch((e) => {});
+}

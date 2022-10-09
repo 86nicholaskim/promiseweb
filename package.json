@@ -1,7 +1,7 @@
 {
   "name": "promiseweb",
-  "version": "1.0.19",
-  "main": "src/index.js",
+  "version": "1.0.23",
+  "main": "lib/promiseweb.js",
   "repository": "github.com/86nichola/promiseweb",
   "homepage": "https://github.com/86nichola/promiseweb",
   "scripts": {
