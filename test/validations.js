@@ -2,8 +2,8 @@ import { createPromiseWeb } from "../lib/promiseweb";
 
 /*
  * test case
- *  -- promiseWebInstance have prevPromise resolve callback by connect function
- *  -- createPromiseWeb can create new flow in low level
+ *  -- promiseWebInstance have prevPromise resolve callback by connect function when start fn called.
+ *  -- createPromiseWeb can create new instance
  */
 export default validations = (promiseWebInstance) => {
   // add actions with Array function list

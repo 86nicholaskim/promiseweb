@@ -2,14 +2,14 @@
   "name": "promiseweb",
   "version": "1.0.23",
   "main": "lib/promiseweb.js",
-  "repository": "github.com/86nichola/promiseweb",
-  "homepage": "https://github.com/86nichola/promiseweb",
+  "repository": "github.com/86nicholaskim/promiseweb",
+  "homepage": "https://github.com/86nicholaskim/promiseweb",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
     "name": "seongbeom kim",
-    "email": "86nichola@gmail.com"
+    "email": "86nicholaskim@gmail.com"
   },
   "license": "MIT",
   "keywords": [

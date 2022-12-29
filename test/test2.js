@@ -24,7 +24,7 @@ export default function test2() {
     validator: () =>
       new Promise((valRes, valRej) => {
         const createPromiseWebInstance = createPromiseWeb();
-        // connect fn called after validations complete.
+        // connect fn called after 'validations' complete.
         createPromiseWebInstance.connect({ resolve: valRes, reject: valRej });
         validations(createPromiseWebInstance);
       }),

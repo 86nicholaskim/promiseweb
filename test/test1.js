@@ -25,13 +25,12 @@ export default function test1() {
         console.log("3");
       }, 2000);
 
-      // create row level flat function
       return new Promise((res, rej) => {
-        const lowStep = createPromiseWeb();
+        const innerStep = createPromiseWeb();
         // connect this Promise Object by parameter with closer,
         // ** Promise - resolve, reject default callbck
-        lowStep.connect({ resolve: res, reject: rej });
-        lowStep.add({
+        innerStep.connect({ resolve: res, reject: rej });
+        innerStep.add({
           fn: () =>
             new Promise((res, rej) => {
               setTimeout(() => {
@@ -40,7 +39,7 @@ export default function test1() {
               }, 6000);
             }),
         });
-        lowStep.add({
+        innerStep.add({
           fn: () =>
             new Promise((res, rej) => {
               setTimeout(() => {
@@ -49,8 +48,8 @@ export default function test1() {
               }, 5000);
             }),
         });
-        // lowstep start
-        lowStep.start();
+        // innerStep start
+        innerStep.start();
       });
     },
   });
